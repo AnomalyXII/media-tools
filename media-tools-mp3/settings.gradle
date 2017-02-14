@@ -1,0 +1,3 @@
+includeFlat 'media-tools-playlist-builder'
+findProject(':media-tools-playlist-builder')?.name = 'media-tools-playlistbuilder'
+

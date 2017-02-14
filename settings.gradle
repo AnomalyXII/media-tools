@@ -1,0 +1,12 @@
+rootProject.name = 'media-tools'
+include 'media-tools-api'
+include 'media-tools-local'
+include 'media-tools-flac'
+include 'media-tools-mp3'
+include 'media-tools-playlist-creator'
+findProject(':media-tools-api')?.name = 'api'
+findProject(':media-tools-local')?.name = 'local'
+findProject(':media-tools-flac')?.name = 'flac'
+findProject(':media-tools-mp3')?.name = 'mp3'
+findProject(':media-tools-playlist-creator')?.name = 'playlist-creator'
+
