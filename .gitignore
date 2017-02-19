@@ -1,3 +1,7 @@
-.idea
+# IntelliJ Stuff
+.idea/
 *.iml
+
+# Build Stuff
 build/
+out/

@@ -1,3 +1,5 @@
 rootProject.name = 'media-tools'
-include 'media-tools-api'
 
+// APIs
+include 'media-tools-api'
+findProject(':media-tools-api')?.name = 'api'
