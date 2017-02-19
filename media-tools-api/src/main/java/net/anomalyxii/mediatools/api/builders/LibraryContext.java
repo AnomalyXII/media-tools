@@ -7,6 +7,7 @@ import net.anomalyxii.mediatools.api.Library;
 import net.anomalyxii.mediatools.api.Song;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -21,6 +22,14 @@ public interface LibraryContext<ID extends Serializable> {
     // *********************************
     // Get Methods
     // *********************************
+
+    /**
+     * Get all the {@link Artist Artists} tracked by this
+     * {@code LibraryContext}.
+     *
+     * @return a {@link List} of {@link Artist Artists}
+     */
+    List<Artist<ID>> getArtists();
 
     /**
      * Get an {@link Artist}.
@@ -41,6 +50,23 @@ public interface LibraryContext<ID extends Serializable> {
     Artist<ID> getArtistByName(String artistName) throws LibraryException;
 
     /**
+     * Get all the {@link Album Albums} tracked by this
+     * {@code LibraryContext}.
+     *
+     * @return a {@link List} of {@link Album Albums}
+     */
+    List<Album<ID>> getAlbums();
+
+    /**
+     * Get all the {@link Album Albums} for a given {@link Artist} tracked by
+     * this {@code LibraryContext}.
+     *
+     * @param artist the {@link Artist}
+     * @return a {@link List} of {@link Album Albums}
+     */
+    List<Album<ID>> getAlbums(Artist<ID> artist);
+
+    /**
      * Get an {@link Album}.
      *
      * @param id the {@link Album} ID
@@ -58,6 +84,31 @@ public interface LibraryContext<ID extends Serializable> {
      * @throws LibraryException if anything goes wrong or the {@link Album} is not found
      */
     Album<ID> getAlbumByArtistAndTitle(Artist<ID> artist, String albumName) throws LibraryException;
+
+    /**
+     * Get all the {@link Song Songs} tracked by this {@code LibraryContext}.
+     *
+     * @return a {@link List} of {@link Song Songs}
+     */
+    List<Song<ID>> getSongs();
+
+    /**
+     * Get all the {@link Song Songs} for a given {@link Artist} tracked by
+     * this {@code LibraryContext}.
+     *
+     * @param artist the {@link Artist}
+     * @return a {@link List} of {@link Song Songs}
+     */
+    List<Song<ID>> getSongsByArtist(Artist<ID> artist);
+
+    /**
+     * Get all the {@link Song Songs} for a given {@link Album} tracked by
+     * this {@code LibraryContext}.
+     *
+     * @param album the {@link Album}
+     * @return a {@link List} of {@link Song Songs}
+     */
+    List<Song<ID>> getSongsByAlbum(Album<ID> album);
 
     /**
      * Get a {@link Song}.
@@ -139,16 +190,6 @@ public interface LibraryContext<ID extends Serializable> {
      * @throws LibraryException if anything goes wrong
      */
     Optional<Song<ID>> findSongByAlbumAndTrackNumber(Album<ID> album, int trackNo) throws LibraryException;
-
-    // *********************************
-    // Create Methods
-    // *********************************
-
-    ArtistBuilder<ID> newArtistBuilder();
-
-    AlbumBuilder<ID> newAlbumBuilder();
-
-    SongBuilder<ID> newSongBuilder();
 
     // *********************************
     // Save Methods

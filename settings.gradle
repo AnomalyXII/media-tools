@@ -3,3 +3,7 @@ rootProject.name = 'media-tools'
 // APIs
 include 'media-tools-api'
 findProject(':media-tools-api')?.name = 'api'
+
+// Implementations
+include 'media-tools-impl-local'
+findProject(':media-tools-impl-local')?.name = 'impl-local'

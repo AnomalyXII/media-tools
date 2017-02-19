@@ -1,7 +1,12 @@
+plugins {
+    id 'org.owasp.dependencycheck' version '3.0.2' apply false
+}
+
 subprojects  {
 
     apply plugin: 'java'
     apply plugin: 'idea'
+    apply plugin: 'org.owasp.dependencycheck'
 
     sourceCompatibility = targetCompatibility = 1.8
 
@@ -12,6 +17,10 @@ subprojects  {
     dependencies {
         testCompile group: 'org.testng', name: 'testng', version: '6.+'
         testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+    }
+
+    test {
+        useTestNG()
     }
 
 }

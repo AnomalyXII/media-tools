@@ -1,0 +1,10 @@
+<?xml version='1.0' ?>
+<!DOCTYPE suite SYSTEM 'http://testng.org/testng-1.0.dtd' >
+
+<suite name='TestNG Unit Test Suite - impl-local'>
+    <test name='All Unit Tests'>
+        <packages>
+            <package name='net.anomalyxii.mediatools.local.*'/>
+        </packages>
+    </test>
+</suite>
