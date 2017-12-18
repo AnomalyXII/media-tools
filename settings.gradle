@@ -19,3 +19,6 @@ findProject(':media-tools-codec-mp3')?.name = 'codec-mp3'
 include 'media-tools-util-playlist-creator'
 findProject(':media-tools-util-playlist-creator')?.name = 'util-playlist-creator'
 
+include 'media-tools-util-spring-runner'
+findProject(':media-tools-util-spring-runner')?.name = 'util-spring-runner'
+
