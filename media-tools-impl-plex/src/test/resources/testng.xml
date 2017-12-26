@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM 'http://testng.org/testng-1.0.dtd' >
+
+<suite name='TestNG Unit Test Suite - impl-plex'>
+    <test name='All Unit Tests'>
+        <packages>
+            <package name='net.anomalyxii.mediatools.plex.*'/>
+        </packages>
+    </test>
+</suite>

@@ -25,7 +25,7 @@ public interface Source {
      *
      * @return
      */
-    List<Source> expand();
+    List<Source> expand() throws MediaException;
 
     /**
      * Convert the {@code Source} to a {@link URI}.
