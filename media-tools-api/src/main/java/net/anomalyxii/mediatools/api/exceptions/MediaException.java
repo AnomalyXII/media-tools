@@ -8,12 +8,27 @@ package net.anomalyxii.mediatools.api.exceptions;
  */
 public class MediaException extends Exception {
 
-    // ******************************
-    // Members
-    // ******************************
-
-    // ******************************
+    // *********************************
     // Constructors
-    // ******************************
+    // *********************************
+
+    public MediaException() {
+    }
+
+    public MediaException(String message) {
+        super(message);
+    }
+
+    public MediaException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public MediaException(Throwable cause) {
+        super(cause);
+    }
+
+    public MediaException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+    }
 
 }

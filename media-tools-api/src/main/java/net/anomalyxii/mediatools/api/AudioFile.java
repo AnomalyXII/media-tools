@@ -11,9 +11,9 @@ import java.net.URI;
  */
 public interface AudioFile {
 
-    // ******************************
+    // *********************************
     // URI Methods
-    // ******************************
+    // *********************************
 
     /**
      * Get the source {@link URI} of this {@code AudioFile}.
@@ -22,9 +22,9 @@ public interface AudioFile {
      */
     URI getSource();
 
-    // ******************************
+    // *********************************
     // Common Metadata Methods
-    // ******************************
+    // *********************************
 
     /**
      * Get the {@code Track Number} from the {@code metadata}.
@@ -62,9 +62,9 @@ public interface AudioFile {
      */
     String getAlbumArtistName();
 
-    // ******************************
+    // *********************************
     // AudioStream Methods
-    // ******************************
+    // *********************************
 
     /**
      * Open a new {@link InputStream} that can be used to read this

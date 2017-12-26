@@ -12,16 +12,16 @@ public final class AudioFileReaders {
 
     private static ServiceLoader<AudioFileReader> readers = ServiceLoader.load(AudioFileReader.class);
 
-    // ******************************
+    // *********************************
     // Constructors
-    // ******************************
+    // *********************************
 
     private AudioFileReaders() {
     } // Do not instantiate me, please!
 
-    // ******************************
+    // *********************************
     // Get Reader
-    // ******************************
+    // *********************************
 
 
     /**

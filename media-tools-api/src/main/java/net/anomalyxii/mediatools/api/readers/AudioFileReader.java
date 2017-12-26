@@ -12,9 +12,9 @@ import java.net.URI;
  */
 public interface AudioFileReader {
 
-    // ******************************
+    // *********************************
     // Interface Methods
-    // ******************************
+    // *********************************
 
     boolean canRead(URI uri);
 

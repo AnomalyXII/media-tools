@@ -10,9 +10,9 @@ import java.net.URI;
  */
 public interface MetadataReader {
 
-    // ******************************
+    // *********************************
     // Interface Methods
-    // ******************************
+    // *********************************
 
     Metadata read(URI uri) throws IOException;
 

@@ -20,9 +20,9 @@ import java.util.List;
  */
 public interface Library<ID extends Serializable> {
 
-    // ******************************
+    // *********************************
     // Interface Methods
-    // ******************************
+    // *********************************
 
     /**
      * Return all the {@link Artist artists} that are included in

@@ -9,9 +9,9 @@ import java.io.Serializable;
  */
 public interface Artist<ID extends Serializable> {
 
-    // ******************************
+    // *********************************
     // Interface Methods
-    // ******************************
+    // *********************************
 
     /**
      * Get the {@code ID} of the {@code Artist}
