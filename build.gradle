@@ -1,9 +1,23 @@
+plugins {
+    id 'com.github.spotbugs' version '3.0.0' apply false
+    id 'org.checkerframework' version '0.4.10' apply false
+}
+
 subprojects  {
 
     apply plugin: 'java'
     apply plugin: 'idea'
+    apply plugin: 'com.github.spotbugs'
+    apply plugin: 'org.checkerframework'
 
     sourceCompatibility = targetCompatibility = 1.8
+
+    checkerFramework {
+        checkers = [
+                'org.checkerframework.checker.nullness.NullnessChecker',
+                'org.checkerframework.checker.units.UnitsChecker'
+        ]
+    }
 
     repositories {
         mavenCentral()

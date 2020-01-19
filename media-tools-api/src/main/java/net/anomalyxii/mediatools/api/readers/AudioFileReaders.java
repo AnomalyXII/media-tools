@@ -23,7 +23,6 @@ public final class AudioFileReaders {
     // Get Reader
     // *********************************
 
-
     /**
      * Get an {@link AudioFileReader} that can read from the
      * specified {@link URI}; if multiple readers can read the URI
@@ -33,14 +32,12 @@ public final class AudioFileReaders {
      * @return the {@link AudioFileReader} that can read the {@link URI}, or {@literal null} if no reader is available
      */
     public static AudioFileReader getReader(URI uri) {
-
         for (AudioFileReader reader : readers) {
             if (reader.canRead(uri))
                 return reader;
         }
 
-        return null;
-
+        throw new IllegalArgumentException("No AudioFileReader was found for '" + uri + "'");
     }
 
 
